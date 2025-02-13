@@ -7,34 +7,24 @@
   </head>
   <body>
     <h1>이미지 삽입하기</h1>
-
-    <img
-      src="/src/assets/food/cake.jpeg"
-      alt="Peace of Cake(한 조각의 평화) - 밀크레이프, 수플레치즈, 초코 티라미슈, 데블스 초코"
-    />
-    <br />
-
-    <img
-      src="/src/assets/food/icecream.webp"
-      alt="밴앤제리스 파인트 아이스크림"
-    />
-    <br />
+    <h2>이미지 요소</h2>
 
     <!-- 벡터 이미지 -->
+    <br />
     <img
       src="/src/assets/svg/chitchat.svg"
       alt="찜하기"
       width="50"
       height="50"
     />
-    <br />
-
     <svg
+      width="50"
+      height="50"
       class="h-12 w-12"
       viewBox="0 0 40 40"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title></title>
+      <title>1대1 채팅</title>
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
           <stop stop-color="#ff0000" offset="0%"></stop>
@@ -62,5 +52,46 @@
         ></path>
       </g>
     </svg>
+    <br />
+
+    <!-- 비트맵 이미지 -->
+    <img
+      src="/src/assets/food/icecream.webp"
+      alt="벤앤제리스 파인트 아이스크림"
+      width="100"
+      height="126"
+    />
+    <br />
+    <img
+      src="/src/assets/food/cake.jpeg"
+      alt="Peace of Cake(한 조각의 평화) - 밀크레이프, 수플레치즈, 초코 티라미슈, 테블스 초코"
+      width="150"
+      height="150"
+    />
+    <br />
+    <h2>피규어 요소</h2>
+    <figure>
+      <img src="/src/assets/drama/good-partner-narrow.webp" alt="" />
+      <figcaption>드라마 굿파트너</figcaption>
+    </figure>
+    <br />
+    <figure>
+      <img
+        src="/src/assets/drama/culinary-class-wars-narrow.jpg"
+        alt="요리 계급 전쟁 - 흑백요리사 (새로운 에피소드 지금 시청하기)"
+        width="284"
+        height="400"
+        loading="lazy"
+      />
+      <figcaption>넷플릭스 흑백요리사</figcaption>
+    </figure>
+    <figure>
+      <img
+        src="/src/assets/drama/mon-friend-son-narrow.webp"
+        alt="엄마 친구 아들 새로운 에피소드 지금 시청하기"
+        width="284"
+        height="400"
+      />
+    </figure>
   </body>
 </html>
