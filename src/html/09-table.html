@@ -16,6 +16,57 @@
 	</head>
 	<body>
 		<h1>테이블 관련 요소</h1>
+
+		<style>
+			table.ex2 {
+				border: 0;
+				border-top: 2px solid #353535;
+				border-bottom: 2px solid #353535;
+			}
+			table tr {
+				border-bottom: 1px solid #ccc;
+			}
+			table th {
+				padding: 10px;
+				border: 0;
+				text-align: left;
+			}
+			table td {
+				padding: 10px;
+				border: 0;
+				color: #555;
+			}
+		</style>
+		<h2>테이블 예제</h2>
+		<table class="ex2">
+			<tr>
+				<th>학습시간</th>
+				<td>09:00 ~ 17:00 (28시간)</td>
+				<th>난이도</th>
+				<td>초급</td>
+			</tr>
+			<tr>
+				<th>교육비 지원</th>
+				<td>고용보험 비환급</td>
+				<th>평가항목</th>
+				<td>출석률 100%</td>
+			</tr>
+			<tr>
+				<th>수료기준</th>
+				<td>총점 80점 이상시 수료</td>
+				<th>정원</th>
+				<td>24 명</td>
+			</tr>
+			<tr>
+				<th>교재정보</th>
+				<td colspan="3">
+					입문자를 위한 GIT과 HTML&amp;CSS <br />
+					HTML &amp; CSS 웹사이트 개발과 디자인 기초 (35,000원)
+				</td>
+			</tr>
+		</table>
+
+		<h2>테이블 기본 요소</h2>
 		<table>
 			<caption>
 				멋쟁이 사자처럼 프론트엔드 스물 13기 스탭
@@ -33,7 +84,14 @@
 					<th scope="col">운영진</th>
 				</tr>
 			</thead>
-
+			<tfoot>
+				<tr>
+					<th scope="row">인원수</th>
+					<td>2명</td>
+					<td>2명</td>
+					<td>2명</td>
+				</tr>
+			</tfoot>
 			<tbody>
 				<tr>
 					<th scope="row">1</th>
@@ -55,15 +113,6 @@
 					<td colspan="2">&nbsp;</td>
 				</tr>
 			</tbody>
-
-			<tfoot>
-				<tr>
-					<th scope="row">인원수</th>
-					<td>2명</td>
-					<td>2명</td>
-					<td>2명</td>
-				</tr>
-			</tfoot>
 		</table>
 	</body>
 </html>
