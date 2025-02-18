@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>picture, source 요소</title>
+	</head>
+	<body>
+		<!-- srcset, sizes 속성 -->
+		<!-- 디스플레이 픽셀 밀도가 소수점이면 가까운 숫자에 따라 나타남 -->
+		<!-- <img
+			srcset="
+				/src/assets/logo/netflix@1x.png 1x,
+				/src/assets/logo/netflix@2x.png 2x
+			"
+			src="/src/assets/logo/netflix@1x.png"
+			alt="넷플릭스"
+		/> -->
+
+		<!-- 이미지 형식 -->
+		<img
+			src="/src/assets/logo/netflix@1x.png"
+			srcset="
+				/src/assets/logo/netflix@1x.webp 1x,
+				/src/assets/logo/netflix@2x.webp 2x
+			"
+			alt="넥플릭스"
+		/>
+	</body>
+</html>
