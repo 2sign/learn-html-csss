@@ -26,5 +26,41 @@
 			"
 			alt="넥플릭스"
 		/>
+
+		<h2>W Descriptor 예시</h2>
+		<picture>
+			<img
+				src="/src/assets/rwd/small-550.jpg"
+				alt=""
+				srcset="
+					/src/assets/rwd/small-550.jpg    550w,
+					/src/assets/rwd/medium-1024.jpg 1024w,
+					/src/assets/rwd/large-1600.jpg  1600w,
+					/src/assets/rwd/normal-1920.jpg 1920w
+				"
+				sizes="(max-width: 768px) 550px, 100vw"
+				srcset=""
+			/>
+		</picture>
+
+		<h2>W Descriptor 예시</h2>
+		<picture>
+			<source
+				srcset="/src/assets/rwd/small-550.jpg 550w"
+				media="(max-width: 500px)"
+				alt=""
+			/>
+			<source
+				srcset="/src/assets/rwd/medium-1024.jpg 10240w"
+				media="(max-width: 768px)"
+				alt=""
+			/>
+			<source
+				srcset="/src/assets/rwd/large-1600.jpg 1600w"
+				media="(max-width: 1280px)"
+				alt=""
+			/>
+			<img src="/src/assets/rwd/normal-1920.jpg" alt="" />
+		</picture>
 	</body>
 </html>
