@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>폼 (input 요소)</title>
+	</head>
+	<body>
+		<h1>form 관련 요소</h1>
+		<h2>input 요소</h2>
+
+		<!-- 한 줄 입력서식 -->
+		<form action="https://formspree.io/f/mvgzdznw" method="POST">
+			<fieldset>
+				<legend>폼 서식</legend>
+				<!-- 폼서식 커스텀 -->
+				<div
+					aria-required="true"
+					contenteditable="true"
+					style="border: 1px solid red; height: 20px; width: 100px"
+				></div>
+				<!-- 폼서식 커스텀 끝 -->
+
+				<div>
+					<label for="userName">이름</label>
+					<input
+						type="text"
+						name="userName"
+						id="userName"
+						required
+						placeholder="에) 슬비쌤"
+						maxlength="5"
+						minlength="3"
+					/>
+				</div>
+				<div>
+					<label for="userPwd">비밀번호</label>
+					<input
+						type="password"
+						name="userPwd"
+						id="userPwd"
+						required
+						placeholder="8자리 이상"
+					/>
+				</div>
+				<!-- 검색 입력 서식 -->
+				<div>
+					<label for="likelionSearch">검색</label>
+					<input type="search" name="likelionSearch" id="likelionSearch" />
+				</div>
+				<!-- 이메일 입력 서식 -->
+				<div>
+					<label for="userEmail">이메일</label>
+					<input type="email" name="userEmail" id="userEmail" required />
+				</div>
+				<!-- 연락처 입력 서식 -->
+				<div>
+					<label for="userPhone">연락처</label>
+					<input
+						type="tel"
+						pattern="[0-9]{10}"
+						name="userPhone"
+						id="userPhone"
+						required
+					/>
+				</div>
+
+				<!-- 체크박스 입력 서식 -->
+				<div>
+					<input
+						type="checkbox"
+						name="classLikelion"
+						value="html"
+						id="classHtml"
+					/>
+					<label for="classHtml">HTML</label>
+				</div>
+				<div>
+					<input
+						type="checkbox"
+						name="classLikelion"
+						value="css"
+						id="classCss"
+					/>
+					<label for="classCss">CSS</label>
+				</div>
+				<div>
+					<input type="checkbox" name="classLikelion" value="js" id="classJs" />
+					<label for="classJs">JS</label>
+				</div>
+
+				<!-- 라디오 서식 -->
+				<div>
+					<input
+						type="radio"
+						name="classRoom"
+						value="classRoom1"
+						id="classRoom1"
+					/>
+					<label for="classRoom1">회고 1팀</label>
+				</div>
+				<div>
+					<input
+						type="radio"
+						name="classRoom"
+						value="classRoom2"
+						id="classRoom2"
+					/>
+					<label for="classRoom2">회고 2팀</label>
+				</div>
+
+				<!-- 전송 버튼 -->
+				<input type="submit" value="전송" />
+				<button type="submit">전송</button>
+			</fieldset>
+		</form>
+	</body>
+</html>
