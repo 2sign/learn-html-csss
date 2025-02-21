@@ -1,0 +1,31 @@
+/* font-family 속성 - 글꼴 */
+body {
+	font-family: 'SUIT', sans-serif;
+	font-weight: 400;
+}
+
+h1 {
+	font-weight: 500;
+	font-size: clamp(12px, 3vw, 24px);
+}
+
+/* font 관련 속성 - 글자 크기, 굵기, 기울임꼴 */
+.size {
+	font-size: 12px;
+	font-weight: 300;
+	font-style: italic;
+	line-height: 1.5;
+	font-variant: small-caps;
+	font-family: "pretendard variable", sans-serif;
+	
+	/* font속성은 font-size와 font-family가 필수옵션이다 */
+	/* font: 24px "pretendard variable"; */
+}
+
+
+/* 단위 - rem */
+
+/*루트 요소 */
+:root{font-size: 10px;}
+body{font-size: 1.4rem;}
+/* 루트 요소를 기준으로 계산한다 - (root10 * body1.4 = 14px로 표기됨) */

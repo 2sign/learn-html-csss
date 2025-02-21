@@ -1,0 +1,8 @@
+/* CSS 박스모델 */
+/* 박스의 테두리 설정 */
+/* 안쪽 여백 설정 - padding */
+.like{
+	border-width:2px;
+	border-style: double;
+	border-color: green;
+}

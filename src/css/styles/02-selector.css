@@ -1,0 +1,73 @@
+body {
+	background-color: #ffc;
+}
+
+/* 태그 선택자 */
+p {
+	color: red;
+
+	&:hover {
+		background-color: skyblue;
+	}
+
+	&:focus {
+		border: 10px solid red;
+	}
+}
+
+/* 클래스 선택자 */
+.like {
+	color: green;
+}
+
+/* 아이디 선택자 */
+#lion {
+	color: blue;
+}
+
+/* 속성 선택자 */
+[title] {
+	color: purple;
+}
+
+a[href^="https://"] {
+	text-decoration: none;
+}
+
+a[href$='pdf'] {
+	background-color: violet;
+}
+
+/* 가상 클래스 선택자 */
+a:link {
+	color: black;
+}
+
+a:visited {
+	color: olive;
+}
+
+a:hover {
+	color: blue;
+}
+
+a:focus {
+	color: aqua;
+}
+
+a:active {
+	background-color: red;
+}
+
+/* 가상 요소 선택자 */
+/*
+: - 가상 클래스
+:: - 가상 요소 (스크린리더에서 읽을수도 있고 읽지 않을수도 있는데 글자 요소는 읽힘)
+*/
+h1::before {
+	content: '멋사';
+}
+
+h1::after {
+	content: '13기';
+}
