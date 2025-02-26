@@ -1,0 +1,75 @@
+@import "/src/common/mini-reset.css";
+
+:root{
+	/* 색상 */
+	--green: #22be61;
+	--silver: #929890;
+	--brown: #e3a368;
+
+	/* 여백 */
+	--spacing-10: .625rem;
+	--spacing-20: 1.25rem;
+	--spacing-60: 3.75rem;
+
+	/* 글자 크기 */
+	--large: 1.125rem;
+	--medium: .875rem;
+	--small: .75rem;
+}
+
+body{
+	margin: 50px;
+}
+
+h1{
+	margin-bottom: 50px;
+}
+
+/* 알림 */
+.notification{
+	--border-color: var(--silver);
+	--text-color: var(--silver);
+	--base-spacing: var(--spacing-20);
+	--large-spacing: var(--spacing-60);
+	--base-gap: var(--spacing-10);
+
+	position: relative;
+	margin: var(--base-gap);
+	padding: var(--base-spacing);
+	padding-left: var(--large-spacing);
+	border: 1px solid var(--border-color);
+	border-radius: 8px;
+	background-repeat: no-repeat;
+	background-position: var(--base-spacing) center;
+
+	.notification-subject{
+		margin-bottom: 4px;
+		font-size: var(--large);
+		font-weight: bold;
+	}
+	.notification-time{
+		position: absolute;
+		top: var(--spacing-20);
+		right: var(--spacing-20);
+		font-size: var(--small);
+		font-weight: bold;
+	}
+	.notification-content{
+		color: var(--text-color);
+		font-size: var(--medium);
+		letter-spacing: -0.03em;
+	}
+
+	&[data-color-type="green"]{
+		background-image: url("/src/assets/svg/pot.svg");
+		.notification-subject, .notification-time{
+			color: var(--green);
+		}
+	}
+	&[data-color-type="brown"]{
+		background-image: url("/src/assets/svg/food.svg");
+		.notification-subject, .notification-time{
+			color: var(--brown);
+		}
+	}
+}

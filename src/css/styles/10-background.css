@@ -1,0 +1,24 @@
+body{
+	/* 배경 색상 */
+	background-color: hsl(180, 50%, 80%);
+	/* 배경 이미지 */
+	background-image: url("/src/assets/images/rabbit.png");
+	/* 배경 이미지 반복 여부 (반복 안함) */
+	background-repeat: no-repeat;
+	/* 배경 이미지 위치 */
+	background-position: 50% 0;
+	/* background-position-x: 30px; */
+	/* background-position-y: 40px; */
+	/* body 요소의 최소 높이 */
+	min-height: 100vh;
+	background-attachment: fixed;
+	/* 배경 이미지 크기 */
+	background-size: 100px 130px;
+	/* 단축 표기법으로 줄요서 선언 */
+	/* 이미지가 1개가 아닌 여러개일 때, 뒤에 선언한 이미지 일수록 뒤로 쌓인다. */
+  background: 
+    url(/src/assets/images/cloud.png) no-repeat 0 100px fixed,
+    url(/src/assets/images/sun.png) no-repeat 150px 50px /150px 150px fixed,
+    linear-gradient(red, green),
+    pink;
+}

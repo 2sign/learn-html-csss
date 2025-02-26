@@ -1,0 +1,163 @@
+@property --text-color{
+  syntax: "<color>";
+  inherits: false;  /*상속여부*/
+  initial-value: orange;
+}
+
+
+/* 전역 변수 정의 */
+:root{
+	/* 색상 팔레트 */
+	--white: #fff;
+	--black: #000;
+	--red: #f00;
+	--green: #0f0;
+	--blue: #00f;
+	--orange: orange;
+	--yellow: yellow;
+	--light-blue: aqua;
+
+	/* 주요 색상 */
+	--primary-color: var(--blue);
+	--secondary-color: var(--light-blue);
+	--accent-color: var(--yellow);
+	--border-color: var(--red);
+
+	/* size */
+  --small: .75rem;
+  --medium: .875rem;
+  --default: 1rem;
+  --large: 1.125rem;
+}
+
+
+.container_1{
+	/* 지역 변수 정의 */
+	--bg-color: var(--green);
+	--border-color: var(--red);
+
+	h1{
+		/* --secondary-color 속성이 없을 때 대안으로 #2ecc71가 적용되도록 설정 */
+		/* 뒤에 작성한 #2ecc71은 폴백 컬러, 변수컬러가 적용안되면 작동될 수 있도록 하는 플랜 b 컬러이다. */
+		background-color: var(--bg-color);
+	}
+	p{
+		border-width: 10px;
+		border-style: solid;
+		border-color: var(--border-color);
+	}
+}
+
+
+
+.container_2{
+	--bg-color: var(--green);
+	--border-color: var(--red);
+
+	h1{
+		background-color: var(--bg-color);
+	}
+	p{
+		border-width: 10px;
+		border-style: solid;
+		border-color: var(--border-color);
+	}
+}
+
+.container_3{
+	--bg-color: var(--blue);
+	--border-color: var(--green);
+
+	h1{
+		background-color: var(--bg-color);
+	}
+	p{
+		border-width: 10px;
+		border-style: solid;
+		border-color: var(--border-color);
+	}
+}
+
+
+.container_4{
+	button{
+		&.small{
+			font-size: var(--small);
+		}
+		&.medium{
+			font-size: var(--medium);
+		}
+		&.default{
+			font-size: var(--default);
+		}
+		&.large{
+			font-size: var(--large);
+		}
+	}
+}
+
+
+.container_5{
+	--font-size: var(--small);
+	--bg-color: var(--green);
+	--text-color: var(--red);
+
+	button{
+		color: var(--text-color);
+		font-size: var(--font-size, 1rem);
+		background-color: var(--bg-color, #fff);
+
+		&.open{
+			--text-color: var(--light-blue);
+			--font-size: var(--small);
+			--bg-color: var(--green);
+		}
+		&.close{
+			--text-color: var(--red);
+			--font-size: var(--default);
+			--bg-color: var(--blue);
+		}
+		&.popup{
+			--text-color: var(--blue);
+			--font-size: var(--large);
+			--bg-color: var(--orange);
+		}
+		&.info{
+			--text-color: var(--yellow);
+			--font-size: var(--medium);
+			--bg-color: var(--white);
+		}
+	}
+}
+
+.container_6{
+	color: var(--text-color);
+
+	.parent{
+		--text-color: blue;
+
+		.child{
+			color: var(--text-color);
+		}
+	}
+}
+
+.container_7{
+	color: red;;
+	border: 1px solid green;
+	padding: 0.5em;
+
+	.parent{
+		border: inherit;
+		padding: inherit;
+		margin: 0;
+
+		.child{
+			color: black;
+			border: inherit;
+			border-color: blue;
+			padding: inherit;
+			display: inline-block;
+		}
+	}
+}
