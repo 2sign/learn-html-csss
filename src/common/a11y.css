@@ -1,0 +1,13 @@
+/* 스크린리더가 읽으려면 영역을 필요로 해서
+최소한의 영역 1px을 준것 */
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
