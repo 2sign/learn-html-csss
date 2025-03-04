@@ -1,5 +1,7 @@
-/* 스크린리더가 읽으려면 영역을 필요로 해서
-최소한의 영역 1px을 준것 */
+@import '/src/common/login-theme.css';
+
+/* 스크린리더 사용자를 위한 클래스 (화면에는 보이지 않지만 스크린 리더 사용자는 접근해서 읽을 수 있음) */
+/* 스크린리더가 읽으려면 영역을 필요로 해서 최소한의 영역 1px을 준것 */
 .sr-only{
   position: absolute;
   width: 1px;
@@ -10,4 +12,16 @@
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+/* 기본 Focus 스타일링 */
+*:focus{
+  outline: 0;
+  box-shadow: 0 0 0 1px #FF1414;
+  border-radius: 0.125rem;
+}
+
+*:focus-visible{
+  box-shadow: 0 0 0 1px #029144;
+  border-radius: 0.125rem;
 }

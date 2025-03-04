@@ -1,0 +1,52 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+
+
+
+h1{
+	/* 겹치는 순서 제어 */
+	z-index: 1;
+	position: sticky;
+	/* top: 0;의 논리 속성은 inset-block-start */
+	inset-block-start: 0;
+	padding: 1rem;
+	background-color: #fff;
+	text-align: center;
+}
+
+.container{
+	inline-size: 35%;
+	margin: 0 auto;
+
+	.team{
+		overflow: hidden;
+		position: sticky;
+		top: 80px;
+		inset-block-start: 80px;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 20px;
+		border-radius: 10px;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	.team-header{
+		padding: 12px 16px;
+		background-color: var(--pastel-dark-blue);
+		color: #fff;
+	}
+	li{
+		block-size: 100%;
+		padding: 12px 16px;
+		border-bottom: 1px solid #ccc;
+		background-color: #fff;
+		font-size: 16px;
+		font-weight: bold;
+		align-content: end;
+		
+		writing-mode: vertical-rl;
+	}
+}
