@@ -1,0 +1,134 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+
+/*
+.container{
+	display: grid;
+	min-width: 100vw;
+	min-height: 100vh;
+	grid-template-rows: repeat(5, 1fr);
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-areas:
+		"item1"
+		"item2"
+		"item3"
+		"item4"
+		"item5"
+	;
+
+	@media (min-width:768px) {
+		grid-template-rows: repeat(8, 1fr);
+		grid-template-columns: repeat(4, 1fr);
+
+		grid-template-areas:
+		"item1 item1 item1 item1"
+
+		"item2 item3 item3 item4"
+		"item2 item3 item3 item4"
+		"item2 item3 item3 item4"
+		"item2 item3 item3 item4"
+		"item2 item3 item3 item4"
+		"item2 item3 item3 item4"
+		
+		"item5 item5 item5 item5"
+	;
+	}
+}
+
+.header {
+	grid-area: item1;
+  background-color: #A2DDF0;
+}
+
+.navigation {
+	grid-area: item2;
+  background-color: #FFB6C1;
+}
+
+.content {
+	grid-area: item3;
+  background-color: #B2F2BB;
+}
+
+.sidebar {
+	grid-area: item4;
+  background-color: #FFF9C4;
+}
+
+.footer {
+	grid-area: item5;
+  background-color: #CFD8DC;
+}
+*/
+
+
+
+
+
+
+
+/* 그리드를 활용한 반응형 레이아웃 */
+/* 그리드 컨테이너 */
+.container{
+  display: grid;
+
+  /* grid item은 order 속성을 활용하여 배치 순서를 변경할 수 있다. 
+  .navigation{
+    order: 1;
+  } */
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(12, 1fr);
+		max-width: 800px;
+		max-inline-size: 800px;
+		margin: 0 auto;
+
+    .header, .navigation, .footer{
+      grid-column: 1 / -1;
+    }
+
+    .content, .sidebar{
+      grid-column: span 6;
+    }
+  }
+
+  @media (min-width: 1024px) {
+		max-width: 1280px;
+		max-inline-size: 1280px;
+
+    .navigation, .sidebar{
+      grid-column: span 3;
+    }
+  }
+}
+
+
+/* 헤더 */
+.header {
+  background: var(--pastel-coral);
+  height: 10vh;
+}
+
+/* 내비게이션 */
+.navigation {
+  background: var(--pastel-green);
+  height: 15vh;
+}
+
+/* 메인 콘텐츠 */
+.content {
+  background: var(--pastel-aqua);
+  height: 40vh;
+}
+
+/* 사이드 바 */
+.sidebar {
+  background: var(--pastel-yellow);
+  height: 25vh;
+}
+
+/* 푸터 */
+.footer {
+  background: var(--pastel-lavender);
+  height: 10vh;
+}
