@@ -1,0 +1,111 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+
+body{
+  margin: 20px;
+}
+
+
+/* Select UI */
+
+/* 방법1 */
+/*
+select{
+	padding: 0.8rem;
+	padding-left: 2rem;
+	padding-right: 1.5rem;
+	border: 1px solid #aaa;
+	border-radius: 10px;
+	color: #666;
+
+	appearance: none;
+	background-image:url('/src/assets/icon/global.svg'), url('/src/assets/icon/triangle.svg');
+	background-repeat: no-repeat;
+	background-position: 10px center, center right 10px;
+}
+*/
+
+/* 방법2 */
+/*
+.language_wrap{
+	display: inline-grid;
+
+	&::before{
+		z-index: 1;
+		grid-area: 1/1/2/2;
+		place-self: center start;
+		pointer-events: none;
+		content: '';
+		display: block;
+		width: 15px;
+		height: 16px;
+		margin-left: 10px;
+		background-image:url('/src/assets/icon/global.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	&::after{
+		z-index: 1;
+		grid-area: 1/1/2/2;
+		place-self: center end;
+		pointer-events: none;
+		content: '';
+		display: block;
+		width: 15px;
+		height: 16px;
+		margin-right: 10px;
+		background-image:url('/src/assets/icon/triangle.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	select{
+		grid-area: 1/1/2/2;
+		padding: 0.8rem;
+		padding-left: 2rem;
+		padding-right: 1.5rem;
+		border: 1px solid #aaa;
+		border-radius: 2px;
+		color: #666;
+		appearance: none;
+	}
+}
+*/
+
+
+
+
+/* Select Component */
+.select{
+  display: inline-grid;
+  border: 1px solid gray;
+  border-radius: 8px;
+  
+  svg, select{
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  svg{
+    margin: 0 0.5em;
+    pointer-events: none;
+  }
+  
+  select{
+    border: 0;
+    background: transparent;
+    appearance: none;
+    padding: 0.5em 1.75em;
+  }
+
+  .icon-global{
+    place-self: center start;
+  }
+
+  .icon-triangle{
+    place-self: center end;
+  }
+}
